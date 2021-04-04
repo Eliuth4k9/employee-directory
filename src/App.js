@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+// import React from 'react';
+// import testOne from './components/utils/API';
+import axios from 'axios';
+import React, {useEffect} from "react"
 
-function App() {
+ export default function App() {
+  useEffect(() => {
+   const varName = axios.get("https://randomuser.me/api/?results=20&nat=us");
+   console.log(varName);
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>Hello World this is a test to see if my pushes are going through</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello from steve react</h1>
     </div>
   );
 }
-
-export default App;
